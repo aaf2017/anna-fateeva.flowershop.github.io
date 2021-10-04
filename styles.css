@@ -15,7 +15,7 @@
 }
 
 body {
-  background-color: var(--color-pink);
+  background-color:var(--color--banner);
 }
 
 .main-menu-container {
@@ -100,42 +100,42 @@ body {
   padding-top: 15px;
 }
 
-.main-banner {
-  min-height: 100vh;
-  background-image: url(./assets/banner2.jpg);
-  background-position: center center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+.welcome {
   background-color: var(--background-dark);
-  display: flex;
 }
 
-.addresses {
-  background-color:var(--background-dark);
+.main-banner {
+  min-height: 80vh;
+  background-image: url(./assets/banner.jpg);
+  background-position: center bottom 35%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  display: flex;
 }
 
 .store-address {
   width: 100vw;
   display: flex;
+  flex-flow: wrap;
   align-content: space-between;
   justify-content: center;
+  gap: 40px 60px;
+  margin-top: -5px;                         /*here to pull it up*/
 }
 .store-address-card {
   display: flex;
   flex-direction: column;
+  flex-wrap: column nowrap;
   background-color:var(--color--banner);
-  width: 300px;
-  height: auto;
-  margin: 50px;
+  width: 200px;
+  margin: -40px 20px 20px 20px;
   color: var(--color-dark);
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  padding: 25px;
+  padding: 15px;
   text-align: center;
-  border: 6px double var(--color-dark);
-  
-  
+  border: 6px double var(--color-dark);  
 }
 
 .address-header {
@@ -152,14 +152,28 @@ body {
   line-height: 32px;
 }
 
+.container-events {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+}
+
+.content-events {
+  background-color: var(--color--light);
+  width: 80vw;
+  border: double 6px var(--color-dark);
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (max-width: 930px){
   .main-banner{
-    min-height: 700px;
+    min-height: 80vh;
   }
 }
 @media screen and (max-width: 780px){
   .main-banner{
-    min-height: 650px;
+    min-height: 70vh;
   }
  
 }
