@@ -3,8 +3,9 @@
   --background-dark: #000000;
   --color-dark: #000000;
   --color-pink: #F9DFDC;
-  --color--light: #ffffff;
-  --color--banner:#dfdedc;
+  --color-purple: #584153;
+  --color-light: #ffffff;
+  --color-banner:#dfdedc;
 }
   
 *,
@@ -15,7 +16,7 @@
 }
 
 body {
-  background-color:var(--color--banner);
+  background-color:var(--background-dark);
 }
 
 .main-menu-container {
@@ -114,19 +115,19 @@ body {
 }
 
 .store-address {
-  width: 100vw;
+  width: 100%;
   display: flex;
-  flex-flow: wrap;
+  flex-flow: nowrap;
   align-content: space-between;
   justify-content: center;
-  gap: 40px 60px;
+  gap:30px;
   margin-top: -5px;                         /*here to pull it up*/
 }
 .store-address-card {
   display: flex;
   flex-direction: column;
   flex-wrap: column nowrap;
-  background-color:var(--color--banner);
+  background-color:var(--color-banner);
   width: 200px;
   margin: -40px 20px 20px 20px;
   color: var(--color-dark);
@@ -146,24 +147,61 @@ body {
 }
 
 .street {
-  text-decoration: underline ;
-  text-shadow: var(--color-pink);
+  text-decoration: underline solid 3px;
+  color: var(--color-purple);
   font-size: 16px;
   line-height: 32px;
 }
 
-.container-events {
+.events-section {
+  width: 90vw;
   display: flex;
-  flex-direction: column;
-  flex-grow: 2;
+  margin: 0 auto;
+  justify-content: center;
 }
-
-.content-events {
-  background-color: var(--color--light);
-  width: 80vw;
+/*
+.container-events {
   border: double 6px var(--color-dark);
   display: flex;
-  align-items: center;
+  justify-content:space-around; 
+}
+*/
+
+.container-events {
+  background-color: var( --color-banner);
+  border: double 10px var(--color-purple);
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+
+}
+
+.img-events { 
+  padding:5px;
+  margin: 20px;
+}
+
+.text-events-header {
+  font-family: 'Niconne', cursive;
+  text-decoration: underline;
+  font-size: 26px;
+  line-height: 26px;
+  color: var(--color-purple);
+  text-align: right;
+  margin: 0 30px 30px auto;
+}
+
+.text-events {
+  margin: 30px;
+  text-align: right;
+}
+
+@media screen and (max-width: 1220px){
+  .store-address{
+    flex-flow: nowrap;
+  }
 }
 
 @media screen and (max-width: 930px){
