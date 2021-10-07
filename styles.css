@@ -8,15 +8,22 @@
   --color-banner:#dfdedc;
 }
   
+html {
+  box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color:var(--background-dark);
+  background-color: var(--background-dark);
+  font-family: 'Open Sans', 'Niconne', 'Abhaya Libre', serif, sans-serif;
+  margin-top: 65px;
 }
 
 .main-menu-container {
@@ -26,14 +33,15 @@ body {
   height: 70px;
   top: 0;
   z-index: 1000;
+  align-content: space-around;
 }
 
 .main-menu {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1200px;
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   align-items: center;
   padding-inline-start: 0;
   color: var(--background-light);
@@ -46,6 +54,9 @@ body {
 }
 
 .menu-item {
+  /*display: inline-block; 
+  width: 100%;
+  text-align: center;*/  /*WESBOS*/
   cursor: pointer;
   opacity: 1;
   color: var(--color-light);
@@ -79,8 +90,7 @@ body {
   background-color: var(--background-dark);
   position: fixed;
   width: 100vw;
-  height: 50px;
-  margin-top: 65px;
+  height: 50px; 
   border-bottom-left-radius:50% 50%;
   border-bottom-right-radius:50% 50%;
   text-align: center; 
@@ -116,8 +126,10 @@ body {
 
 .store-address {
   width: 100%;
+  width: 100vw;
   display: flex;
   flex-flow: nowrap;
+  flex-wrap: nowrap;
   align-content: space-between;
   justify-content: center;
   gap:30px;
@@ -128,7 +140,7 @@ body {
   flex-direction: column;
   flex-wrap: column nowrap;
   background-color:var(--color-banner);
-  width: 200px;
+  width: 250px;
   margin: -40px 20px 20px 20px;
   color: var(--color-dark);
   font-size: 16px;
@@ -154,8 +166,10 @@ body {
 }
 
 .events-section {
-  width: 90vw;
+  width: 70vw;
+  height: auto;
   display: flex;
+  
   margin: 0 auto;
   justify-content: center;
 }
@@ -170,21 +184,23 @@ body {
 .container-events {
   background-color: var( --color-banner);
   border: double 10px var(--color-purple);
-  width: 90%;
+  min-width: none;
   margin: 30px auto;
   display: flex;
   align-items: flex-start;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 
 }
 
-.img-events { 
+.img-events>img { 
+  object-fit:scale-down;
   padding:5px;
   margin: 20px;
 }
 
 .text-events-header {
   font-family: 'Niconne', cursive;
+  letter-spacing: .2rem;
   text-decoration: underline;
   font-size: 26px;
   line-height: 26px;
@@ -196,13 +212,19 @@ body {
 .text-events {
   margin: 30px;
   text-align: right;
+  font-family: 'Open Sans', sans-serif;
 }
-
-@media screen and (max-width: 1220px){
-  .store-address{
-    flex-flow: nowrap;
-  }
-}
+ @media screen and (max-width: 1300px) {
+   .store-address {
+     flex-wrap: wrap;
+     margin-top: -60px;
+   }
+   .store-address-card {
+     width: 400px;
+     gap: 10px;
+     margin: -40px 15px 15px 15px;
+   }
+ }
 
 @media screen and (max-width: 930px){
   .main-banner{
