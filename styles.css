@@ -24,6 +24,7 @@ body {
   background-color: var(--background-dark);
   font-family: 'Open Sans', 'Niconne', 'Abhaya Libre', serif, sans-serif;
   margin-top: 65px;
+  min-width: 280px;
 }
 
 .main-menu-container {
@@ -49,8 +50,8 @@ body {
   font-size: 26px;
   line-height: 26px;
   height: 70px;
-  padding-left: 40px;
-  padding-right: 40px;
+  /*padding-left: 40px;
+  padding-right: 40px;*/
 }
 
 .menu-item {
@@ -80,6 +81,8 @@ body {
 
 .menu-wordlink {
   display: flex;
+  min-width: 120px;
+  justify-content: center;
 }
 
 .logo {
@@ -90,10 +93,11 @@ body {
   background-color: var(--background-dark);
   position: fixed;
   width: 100vw;
-  height: 50px; 
+  height: auto; 
   border-bottom-left-radius:50% 50%;
   border-bottom-right-radius:50% 50%;
   text-align: center; 
+  z-index: 1000;
 
   /* color: var(--color-pink);
   font-size: 12px;
@@ -108,7 +112,8 @@ body {
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .welcome {
@@ -116,9 +121,10 @@ body {
 }
 
 .main-banner {
-  min-height: 80vh;
-  background-image: url(./assets/banner.jpg);
-  background-position: center bottom 35%;
+  min-height: 100vh;
+  background-image: url(./assets/banner-b.jpg);
+  object-fit:scale-down;
+  background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
   display: flex;
@@ -132,46 +138,46 @@ body {
   flex-wrap: nowrap;
   align-content: space-between;
   justify-content: center;
-  gap:30px;
-  margin-top: -5px;                         /*here to pull it up*/
+  gap: 30px;
+  margin-top: -5px;
 }
 .store-address-card {
   display: flex;
   flex-direction: column;
-  flex-wrap: column nowrap;
+  flex-wrap: nowrap;
   background-color:var(--color-banner);
-  width: 250px;
-  margin: -40px 20px 20px 20px;
+  min-width: 250px;
+  margin: -40px 10px 10px 10px;
   color: var(--color-dark);
-  font-size: 16px;
+  font-size: 12px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
-  border: 6px double var(--color-dark);  
+  border: 6px double var(--color-purple);  
 }
 
 .address-header {
   font-family: 'Abhaya Libre', serif;
   font-weight: 800;
-  font-size: 24px;
-  line-height:32px;
+  font-size: 18px;
+  line-height:24px;
 }
 
 .street {
   text-decoration: underline solid 3px;
   color: var(--color-purple);
-  font-size: 16px;
-  line-height: 32px;
+  font-size: 12px;
+  line-height: 24px;
 }
-
-.events-section {
-  width: 70vw;
+/*
+.cards-section {
+  min-width: 280px;
   height: auto;
   display: flex;
-  
-  margin: 0 auto;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 /*
 .container-events {
@@ -181,24 +187,54 @@ body {
 }
 */
 
-.container-events {
-  background-color: var( --color-banner);
-  border: double 10px var(--color-purple);
-  min-width: none;
-  margin: 30px auto;
+.cards {
+  background-color: var(--background-dark);
+  /*min-width: none;
+  margin: 40px;
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;*/
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
   flex-wrap: wrap;
-
+}
+.cards .events {
+  background-color: var( --color-banner);
+  border: double 10px var(--color-purple);
+  position: relative;
+  max-width: 1000px;
+  margin: 10px;
+  display: flex;
 }
 
-.img-events>img { 
+.cards .events .imgBox {
+  max-width: 500px;
+  flex: 0 0 auto;
+}
+
+.cards .events .imgBox img {
+  max-width: 100%;
+  margin: 10px;
+  padding: 5px;
+}
+
+.cards .events .textBox {
+  margin: 10px;
+  padding: 5px;
+  width: 100%;
+  height: auto;
+  float: left;
+}
+/*.imgBox>img { 
   object-fit:scale-down;
   padding:5px;
   margin: 20px;
-}
+}*/
 
-.text-events-header {
+.cards .events .textBox .textBox-header {
   font-family: 'Niconne', cursive;
   letter-spacing: .2rem;
   text-decoration: underline;
@@ -209,58 +245,98 @@ body {
   margin: 0 30px 30px auto;
 }
 
-.text-events {
+.cards .events .textBox .textBox-p {
   margin: 30px;
   text-align: right;
   font-family: 'Open Sans', sans-serif;
 }
- @media screen and (max-width: 1300px) {
-   .store-address {
-     flex-wrap: wrap;
-     margin-top: -60px;
-   }
-   .store-address-card {
-     width: 400px;
-     gap: 10px;
-     margin: -40px 15px 15px 15px;
-   }
- }
 
-@media screen and (max-width: 930px){
-  .main-banner{
-    min-height: 80vh;
+@media screen and (max-width: 1300px){
+  .store-address {
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: -120px;
+  }
+  .store-address-card {
+    width: 380px;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .store-address-card {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width:991px){
+  .cards {
+    flex-direction: column;
+  }
+  .store-address {
+    gap: 40px;
+    margin-top: -160px;
+  }
+}
+
+@media screen and (max-width: 930px){
+  .store-address-card {
+    width: 280px;
+  }
+  .store-address {
+    margin-top: -200px;
+  }
+}
+
 @media screen and (max-width: 780px){
-  .main-banner{
-    min-height: 70vh;
+  .menu-wordlink {
+    display: none;
+  }
+  .navbar-textline {
+    font-size: 12px;
   }
  
 }
-@media screen and (max-width: 700px){
-  .menu-wordlink {
-    display: none;
+@media screen and (max-width:768px){
+  .cards {
+    flex-direction: column;
+  }
+  .cards .events {
+    flex-direction: column;
+    max-width:350px;
+  }
+  .cards .events .imgBox {
+    max-width:100%;
+  }
+  .cards .events .imgBox img {
+    padding: 0;
+    margin: 0;
+  }
+  .cards .events .textBox {
+    width: 100;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 709px){
+  .store-address-card {
+    width: 250px;
+  }
+  .store-address {
+    margin-top: -220px;
   }
 }
 @media screen and (max-width: 576px){
   .menu-wordlink {
     display: none;
   }
+  .store-address {
+    margin-top: -270px;
+  }
 }
-@media screen and (max-width: 637px){
- 
-}
-@media screen and (max-width: 545px){
 
-}
-@media screen and (max-width: 437px){
- 
-}
 @media screen and (max-width: 365px){
-  
-}
-@media screen and (max-width: 282px){
-  .main-banner{
-    min-height: 350px;
+  .store-address {
+    margin-top: -320px;
   }
 }
