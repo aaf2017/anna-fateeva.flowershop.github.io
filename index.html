@@ -154,8 +154,9 @@
         </section>
     </main>
     <div class="container"></div>  
+
     <footer>
-    <!-- Footer main -->
+    <!-- FOOTER MAIN -->
         <section class="footer-main">
             <div class="footer-main-item">
                 <h2 class="footer-title">Menu</h2>
@@ -171,32 +172,43 @@
                 <h2 class="footer-title">Order</h2>
                 <ul>
                     <li><a href="#">Online</a></li>
-                    <p class="order-phone-p">By Phone:</p>
-                    <p class="order-phone-p">Miami-Dade: (305) 000-0000</p>
-                    <p class="order-phone-p">Broward: (954) 000-0000</p>
+                    <li><a href="#">By Phone:</a></li>
+                    <li class="order-phone-p">Miami-Dade: (305) 000-0000</li>
+                    <li class="order-phone-p">Broward: (954) 000-0000</li>
                 </ul>
             </div>
             <div class="footer-main-item">
                 <h2 class="footer-title">Contact</h2>
                 <ul>
-                    <li><a href="#">Customer Service:</a></li>
-                    <li><a href="#">customerservice@flowery.com</a></li>
-                    <p class="order-phone-p">(305) 305-0000</p>
+                    <li><a href="#">Customer Service</a></li>
+                    <li class="customer-service"><a href="#">customerservice@flowery.com</a></li>
+                    <li class="order-phone-p">(305) 305-0000</li>
                 </ul>
             </div>
             <div class="footer-main-item footer-signup-form">
-                <h2 class="footer-title">Stay Connected</h2>
-                <p class="signup-p">
-                    Sign up for our Flowery Friends Circle to receive our latest news, holiday discounts, upcoming workshop information, and much more.
-                </p>
-                <form>
-                    <input type="email" name="email" placeholder="Enter Your Email Address">
-                    <input type="submit" value="Sign Up">
+                <h2 class="footer-title">Join The Club</h2>
+                <form
+                    action="https://formspree.io/f/mgerboer"
+                    method="POST"
+                >
+                    <input  
+                        type="email" 
+                        name="email" 
+                        placeholder="Enter your email"
+                    >
+                    <button 
+                        type="submit"
+                        >
+                            Sign Up
+                    </button>
                 </form>
+                <p class="signup-p">
+                    Sign up for our mailer to receive the latest deals and news.
+                </p>
             </div>
         </section>
 
-        <!-- Footer social -->
+        <!-- FOOTER SOCIAL MEDIA-->
         <section class="ft-social">
             <ul class="ft-social-list">
             <li><a href="#"><i class="fab fa-facebook"></i></a></li>
@@ -208,13 +220,9 @@
             </ul>
         </section>
 
-        <!-- Footer legal -->
-        <section class="ft-legal">
-            <ul class="ft-legal-list">
-            <li><a href="#">Terms &amp; Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li>&copy; 2019 Copyright Nowrap Inc.</li>
-            </ul>
+        <!-- FOOTER COPYRIGHT -->
+        <section class="footer-copyright">
+            <p class="copyright">&copy; 2021 Copyright Flowery, Inc.</p>
         </section>
     </footer>
     
