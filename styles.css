@@ -107,8 +107,7 @@ body {
 
 .main-banner {
   min-height: 100vh;
-  background-image: url(./assets/banner-b.jpg);
-  
+  background-image: url(./assets/banner-c.jpg);
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -215,6 +214,72 @@ body {
   line-height: 28px;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+
+/*TRENDING NOW SLIDER*/
+
+.box {
+  width: 100%;
+  height: auto;
+  background: var(--background-dark);
+  position: relative;
+  padding: 0;  
+}
+.trends-header {
+  color:var(--color-pink);
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 3.5px;
+  font-size: 28px;
+  line-height: 34px;
+  margin: 85px 0 65px 0;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  z-index: 100;
+}
+.cardbox {
+  width: 100%;
+  height: auto;
+  margin: 0 0 65px 0;
+  min-height: 240px;
+  padding: 0;
+  overflow: hidden;
+}
+.card {
+  height: auto;
+  min-width: 260px;
+  background: var(--color-light); 
+  margin: 0 20px;
+  border-radius: 1%;
+  
+}
+.cardimg {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 10px auto;
+  display: block; 
+}
+.cardimg img {
+  width: 100%;
+  height: auto;
+  border-radius: 3%;
+  -webkit-box-shadow: 4px 5px 16px 2px rgba(88,65,83,0.95); 
+  box-shadow: 4px 5px 16px 2px rgba(88,65,83,0.95);
+}
+.undercardbox {
+  animation: move 60s linear 3s infinite alternate;
+  display: flex;
+  flex-direction: row;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-2800px + 100%));
+  }
 }
 
 /* FOOTER */
