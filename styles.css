@@ -83,6 +83,7 @@ body {
   border-bottom-right-radius:50% 50%;
   text-align: center; 
   z-index: 1000;
+  flex: 1;
 }
 .navbar-textline {
   color: var(--color-pink);
@@ -98,8 +99,7 @@ body {
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  display: flex;
-  flex: 1;
+  display: flex; 
 }
 .store-address {
   width: 100%;
@@ -187,7 +187,6 @@ body {
 }
 .cards .info .textBox .textBox-p {
   margin: 20px;
-  text-align: match-parent;
   font-family: 'Open Sans', sans-serif;
   line-height: 28px;
   text-overflow: ellipsis;
@@ -203,14 +202,15 @@ body {
   position: relative;
   padding: 0;  
 }
-.trends-header {
+.trends-header,
+.contact-form-header {
   color:var(--color-pink);
   font-family: 'Abhaya Libre', serif;
   font-weight: 800;
   letter-spacing: 3.5px;
   font-size: 28px;
   line-height: 34px;
-  margin: 85px 0 65px 0;
+  margin: 65px auto;
   text-transform: uppercase;
   position: relative;
   text-align: center;
@@ -320,9 +320,10 @@ a:hover {
 *form {
   display: flex;
   flex-wrap: nowrap;
-  width: 300px;
+  min-width: 280px;
 }
-input[type="email"] {
+input[id="signup-email"] {
+  min-width: 250px;
   padding: 10px 5px 10px 0px; 
   background-color: var(--color-dark-purple);
   font-size: 12px;
@@ -330,7 +331,8 @@ input[type="email"] {
   border: 0;
   border-bottom: 2px solid var(--color-light);
 }
-button[type="submit"] {
+button[type="submit"],
+.contact-form-structure li button {
   background-color: var(--color-dark-purple);
   color:var(--color-light);
   cursor: pointer;
@@ -341,8 +343,10 @@ button[type="submit"] {
   margin-left: auto;
   text-transform: uppercase;
   font-size: 14px;
+  letter-spacing: 3px;
 }
-button:hover[type="submit"] {
+button:hover[type="submit"],
+.contact-form-structure li button:hover {
   background:var(--color-gold);
   color: var(--color-dark);
   border-radius: 5px;
@@ -382,12 +386,12 @@ button:hover[type="submit"] {
 
 @media screen and (max-width: 1300px){
   .store-address {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 40px;
     margin-top: -20px;
   }
   .store-address-card {
-    width: 380px;
+    width: 300px;
   }
 }
 
@@ -399,6 +403,7 @@ button:hover[type="submit"] {
     width: 350px;
   }
   .store-address {
+    flex-wrap: wrap;
     margin-top: -20px;
   }
 }
@@ -457,6 +462,9 @@ button:hover[type="submit"] {
 }
 
 @media screen and (max-width: 709px){
+  .navbar-textline {
+    font-size: 16px;
+  }
   .main-banner {
     min-height: 60vh;
   }
@@ -495,6 +503,13 @@ button:hover[type="submit"] {
   }
 }
 
+@media screen and (max-width: 401px) {
+  button[type="submit"]{
+    margin-top: 15px;
+    padding: 10px;
+  }
+}
+
 @media screen and (max-width: 365px) {
   .main-banner {
     min-height: 45vh;
@@ -505,11 +520,78 @@ button:hover[type="submit"] {
 }
 
 @media screen and (max-width: 341px) {
-  button[type="submit"]{
-    margin-top: 15px;
-    padding: 5px;
-  }
   .footer-main {
     justify-content: space-between;
   }
+  .navbar-textline {
+    font-size: 14px;
+  }
 }
+
+
+
+/*CONTACT.html*/
+
+/*CONTACT-BANNER*/
+.contact-banner {
+  min-height: 40vh;
+  background-image: url(./assets/contact-banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  display: flex;
+}
+/*CONTACT FORM*/
+.contact-container {
+  width: 100%;
+  margin: 0 auto;
+}
+ul .contact-form-structure {
+  list-style-type: none;
+  padding: 0;
+}
+.contact-form-structure {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.contact-form-structure li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.contact-form-structure > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contact-form-structure li label,
+.contact-form-structure li p {
+  padding: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-pink);
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+.contact-form-structure li label + * {
+  flex: 1 0 220px;
+}
+.contact-form-structure li p {
+  margin: 0;
+}
+.contact-form-structure li input,
+.contact-form-structure li textarea {
+  padding: 15px;
+  border: none;
+}
+input::placeholder,
+textarea::placeholder {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+
+
+
+
