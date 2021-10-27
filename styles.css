@@ -352,22 +352,6 @@ button:hover[type="submit"],
   border-radius: 5px;
 }
 
-/* FOOTER SOCIAL MEDIA */
-
-.footer-social {
-  padding: 0 30px 20px;
-}
-.footer-social-list {
-  display: flex;
-  justify-content: center;
-  border-top: 1px var(--color-gold) solid;
-  padding-top: 20px;
-}
-.footer-social-list li {
-  margin: 8px;
-  font-size: 20px;
-}
-
 /* FOOTER COPYRIGHT */
 
 .footer-copyright {

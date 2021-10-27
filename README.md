@@ -7,10 +7,13 @@ GITHUB source code link: https://github.com/aaf2017/anna-fateeva.flowershop.gith
 USER STORIES:
 
 USER A 
+As a potential customer, I want to see where the stores are located so I can decide which one is more conveniently located for me.
 
 USER B
+As a resident of New York City, I want to place an order over the phone so I can send flowers to my mom who lives in Florida.
 
-USER C 
+USER C
+As an immature florist, I want to know if the flowershop has workshops so I can attend. 
 
 CREDITS and ATTRIBUTES:
 
@@ -22,7 +25,7 @@ https://juliatesta.com/
 MULTI-LEVEL STICKY FOOTER 
 
 inspired by Anna Monus -
- https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-multi-level-sticky-footer-with-flexbox--cms-33341
+https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-multi-level-sticky-footer-with-flexbox--cms-33341
 
 IMAGE SLIDER
 

@@ -60,6 +60,7 @@ document.querySelector(".js-header").innerHTML = `
 `;
 
 document.querySelector(".js-footer").innerHTML = `
+
     <!-- FOOTER MAIN -->
             <section class="footer-main">
                 <div class="footer-main-item">
@@ -112,18 +113,6 @@ document.querySelector(".js-footer").innerHTML = `
                     </p>
                 </div>
             </section>
-
-        <!-- FOOTER SOCIAL MEDIA-->
-        <!--  <section class="ft-social">
-                <ul class="ft-social-list">
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-github"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                </ul>
-            </section>-->
 
         <!-- FOOTER COPYRIGHT -->
             <section class="footer-copyright">
